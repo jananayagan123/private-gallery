@@ -1,1 +1,33 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Private Gallery</title>
+</head>
+
+<body>
+  <h1>🔐 Private Gallery</h1>
+
+  <p>Enter your key to continue</p>
+
+  <input type="password" id="key" placeholder="Enter Key">
+
+  <button onclick="checkKey()">Enter</button>
+
+  <p id="message"></p>
+
+  <script>
+    function checkKey() {
+      const key = document.getElementById("key").value;
+
+      if (key === "1234") {
+        document.getElementById("message").innerText =
+          "✅ Correct Key!";
+      } else {
+        document.getElementById("message").innerText =
+          "❌ Wrong Key!";
+      }
+    }
+  </script>
+</body>
+</html>
